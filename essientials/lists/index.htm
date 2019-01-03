@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>VueJs Tuts</title>
+<script src="https://unpkg.com/vue"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+<div id="app">
+	<ul>
+		<li v-for="color in colors" v-if="color.primary">{{color.text}}</li>
+	</ul>
+</div>
+<script>
+	var app = new Vue({
+		el:"#app",
+		data:{
+			colors:[
+				{
+					text:'red',
+					primary:true
+				},
+				{
+					text:'yellow',
+					primary:false
+				},
+				{
+					text:'green',
+					primary:true
+				},
+				{
+					text:'blue',
+					primary:true
+				},
+				{
+					text:'black',
+					primary:false
+				},
+				{
+					text:'orange',
+					primary:true
+				},
+			]
+			//colors:['red','yellow','green','blue','black','orange']
+		}
+	})
+</script>
+</body>
+</html>
